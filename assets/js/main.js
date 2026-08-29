@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    var sections = document.querySelectorAll('section[id]');
-    var navLinks = document.querySelectorAll('.nav-link');
+    var sections = document.querySelectorAll('main section[id]');
+    var navLinks = document.querySelectorAll('.nav-links .nav-link');
+    var topbar = document.getElementById('topbar');
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Cursor glow effect — pointer devices only
+    // Cursor glow — fine pointers only
     var finePointer = window.matchMedia('(pointer: fine)').matches;
     if (finePointer && !reduceMotion) {
         document.addEventListener('mousemove', function (e) {
@@ -13,20 +14,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Section fade-in + scroll spy (with fallback so content always shows)
+    // Topbar background once past the hero fold
+    function updateTopbar() {
+        if (!topbar) return;
+        topbar.classList.toggle('scrolled', window.scrollY > 30);
+    }
+    window.addEventListener('scroll', updateTopbar, { passive: true });
+    updateTopbar();
+
     if ('IntersectionObserver' in window) {
+        // Section fade-in on scroll
         var fadeObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.05, rootMargin: '0px 0px -60px 0px' });
+        }, { threshold: 0.04, rootMargin: '0px 0px -40px 0px' });
 
         sections.forEach(function (s) {
             fadeObserver.observe(s);
         });
 
+        // Scroll spy for topbar nav
         var spyObserver = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
@@ -36,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 }
             });
-        }, { rootMargin: '-40% 0px -58% 0px' });
+        }, { rootMargin: '-35% 0px -58% 0px' });
 
         sections.forEach(function (s) {
             spyObserver.observe(s);

@@ -17,7 +17,7 @@
     <script>document.documentElement.classList.add('js');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -25,71 +25,85 @@
 <body>
     <div class="cursor-glow" aria-hidden="true"></div>
 
-    <div class="layout">
+    <!-- ==================== TOP BAR ==================== -->
+    <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+            <a href="#top" class="mark">Aprameya<span class="mark-dot">.</span></a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+            </nav>
+            <a href="assets/resume/resume9.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-small">Resume</a>
+        </div>
+    </header>
 
-        <!-- ==================== SIDEBAR ==================== -->
-        <header class="sidebar">
-            <div class="sidebar-top">
-                <img src="assets/images/bhat.jpg" alt="Aprameya Bhat" class="avatar">
-                <h1><a href="/">Aprameya Bhat</a></h1>
-                <h2>Senior Software Engineer at <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a></h2>
-                <p class="tagline">I build platform infrastructure that engineering teams rely on every day.</p>
-                <p class="status-chip"><span class="status-dot" aria-hidden="true"></span> Currently building observability at Roblox</p>
-                <p class="location"><i class="fas fa-location-dot"></i> Bay Area, CA</p>
+    <main>
 
-                <nav class="nav" aria-label="Main navigation">
-                    <a href="#about" class="nav-link active">
-                        <span class="nav-indicator"></span>
-                        <span class="nav-text">About</span>
-                    </a>
-                    <a href="#experience" class="nav-link">
-                        <span class="nav-indicator"></span>
-                        <span class="nav-text">Experience</span>
-                    </a>
-                    <a href="#skills" class="nav-link">
-                        <span class="nav-indicator"></span>
-                        <span class="nav-text">Skills</span>
-                    </a>
-                    <a href="#projects" class="nav-link">
-                        <span class="nav-indicator"></span>
-                        <span class="nav-text">Projects</span>
-                    </a>
-                    <a href="#education" class="nav-link">
-                        <span class="nav-indicator"></span>
-                        <span class="nav-text">Education</span>
-                    </a>
-                </nav>
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="top">
+            <div class="orb orb-a" aria-hidden="true"></div>
+            <div class="orb orb-b" aria-hidden="true"></div>
+
+            <div class="container hero-inner">
+                <div class="hero-eyebrow">
+                    <img src="assets/images/bhat.jpg" alt="Aprameya Bhat" class="avatar">
+                    <p class="status-chip"><span class="status-dot" aria-hidden="true"></span> Building observability at Roblox</p>
+                </div>
+
+                <h1 class="hero-name">Aprameya <em>Bhat</em></h1>
+                <p class="hero-role">Senior Software Engineer</p>
+                <p class="hero-tag">I design and run the logging, monitoring, and data pipeline infrastructure that engineering teams rely on every day &mdash; at scale, and out of sight.</p>
+
+                <div class="hero-meta">
+                    <span class="hero-meta-item"><i class="fas fa-location-dot"></i> Bay Area, CA</span>
+                    <a class="hero-meta-item" href="mailto:abhat3@binghamton.edu"><i class="fas fa-envelope"></i> abhat3@binghamton.edu</a>
+                </div>
+
+                <ul class="social-links" aria-label="Social links">
+                    <li><a href="https://github.com/bhataprameya" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/aprameya-bhat/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="mailto:abhat3@binghamton.edu" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="assets/resume/resume9.pdf" target="_blank" rel="noopener" aria-label="Resume"><i class="fas fa-file-lines"></i></a></li>
+                </ul>
             </div>
 
-            <ul class="social-links" aria-label="Social links">
-                <li><a href="https://github.com/bhataprameya" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/aprameya-bhat/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="mailto:abhat3@binghamton.edu" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="assets/resume/resume9.pdf" target="_blank" rel="noopener" aria-label="Resume"><i class="fas fa-file-lines"></i></a></li>
-            </ul>
-        </header>
+            <a class="scroll-cue" href="#about" aria-label="Scroll to content"><i class="fas fa-chevron-down"></i></a>
+        </section>
 
-        <!-- ==================== MAIN CONTENT ==================== -->
-        <main id="content">
+        <!-- ==================== STATS ==================== -->
+        <div class="container">
+            <section class="stats" aria-label="Highlights">
+                <div class="stat"><b>9+</b><span>Years engineering platforms</span></div>
+                <div class="stat"><b>$2.3M</b><span>Annual infra savings delivered</span></div>
+                <div class="stat"><b>2</b><span>Observability stacks built zero-to-one</span></div>
+                <div class="stat"><b>1</b><span>IEEE publication</span></div>
+            </section>
+        </div>
+
+        <div class="container">
 
             <!-- ==================== ABOUT ==================== -->
             <section id="about" aria-label="About me">
-                <div class="section-label">About</div>
-                <p>I build and run platform infrastructure, logging systems, monitoring stacks, data pipelines. The things engineering teams rely on but hopefully never have to think about.</p>
-                <p>Currently a Senior Software Engineer at <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, where I'm building out the logging and observability platform, real-time logging with Kafka and Elasticsearch, self-hosting <a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a> for error tracking, and monitoring with Prometheus and Grafana on Kubernetes. Before Roblox, I spent close to seven years at <a href="https://www.fanaticsinc.com" target="_blank" rel="noopener">Fanatics</a> going from Software Engineer to Senior Platforms Engineer, building their entire observability and data stack from scratch and saving the company over $2.3M annually by optimizing the logging pipeline.</p>
+                <h2 class="section-title"><span class="tick" aria-hidden="true"></span>About</h2>
+                <p class="lead">I build and run platform infrastructure &mdash; logging systems, monitoring stacks, data pipelines. The things engineering teams rely on but hopefully never have to think about.</p>
+                <p>Currently a Senior Software Engineer at <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox</a>, where I'm building out the logging and observability platform: real-time logging with Kafka and Elasticsearch, self-hosting <a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a> for error tracking, and monitoring with Prometheus and Grafana on Kubernetes. Before Roblox, I spent close to seven years at <a href="https://www.fanaticsinc.com" target="_blank" rel="noopener">Fanatics</a>, going from Software Engineer to Senior Platforms Engineer, building their entire observability and data stack from scratch and saving the company over $2.3M annually by optimizing the logging pipeline.</p>
                 <p>I did my Master's in CS at <a href="https://www.binghamton.edu/watson/" target="_blank" rel="noopener">Binghamton University</a>, where I worked on OS virtualization research and co-authored a paper published at IEEE MASCOTS 2018.</p>
             </section>
 
             <!-- ==================== EXPERIENCE ==================== -->
-            <!-- To add a new role: copy a <div class="exp-item">...</div> block -->
             <section id="experience" aria-label="Work experience">
-                <div class="section-label">Experience</div>
+                <h2 class="section-title"><span class="tick" aria-hidden="true"></span>Experience</h2>
 
-                <div class="exp-item">
-                    <div class="exp-date">March 2025 &mdash; Present</div>
-                    <div class="exp-body">
-                        <h3>Senior Software Engineer &middot; <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox Corporation</a></h3>
-                        <p class="exp-sub">San Mateo, CA</p>
+                <div class="exp-list">
+
+                    <article class="exp-item">
+                        <div class="exp-head">
+                            <p class="exp-date">March 2025 &mdash; Present &middot; San Mateo, CA</p>
+                            <h3>Senior Software Engineer &middot; <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox Corporation</a></h3>
+                        </div>
                         <ul>
                             <li>Design and implement highly scalable, real-time logging system using Kafka, Elasticsearch, and Kibana, enabling comprehensive end-to-end production visibility</li>
                             <li>Deploy and manage self-hosted open-source Sentry for error tracking and monitoring as an infra platform for the company</li>
@@ -98,27 +112,15 @@
                             <li>Develop and optimize ETL pipelines with FluentBit for data scraping, enrichment, streaming, and ingestion, improving data flow and observability across the platform</li>
                         </ul>
                         <div class="tags">
-                            <span>Kafka</span>
-                            <span>Elasticsearch</span>
-                            <span>Kibana</span>
-                            <span>Sentry</span>
-                            <span>Nomad</span>
-                            <span>MCP</span>
-                            <span>Kubernetes</span>
-                            <span>Prometheus</span>
-                            <span>Grafana</span>
-                            <span>FluentBit</span>
-                            <span>AWS</span>
-                            <span>Terraform</span>
+                            <span>Kafka</span><span>Elasticsearch</span><span>Kibana</span><span>Sentry</span><span>MCP</span><span>Kubernetes</span><span>Prometheus</span><span>Grafana</span><span>FluentBit</span><span>AWS</span>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-date">2018 &mdash; 2025</div>
-                    <div class="exp-body">
-                        <h3>Senior Platforms Engineer &middot; <a href="https://www.fanaticsinc.com" target="_blank" rel="noopener">Fanatics, Inc.</a></h3>
-                        <p class="exp-sub">San Mateo, CA</p>
+                    <article class="exp-item">
+                        <div class="exp-head">
+                            <p class="exp-date">2018 &mdash; 2025 &middot; San Mateo, CA</p>
+                            <h3>Senior Platforms Engineer &middot; <a href="https://www.fanaticsinc.com" target="_blank" rel="noopener">Fanatics, Inc.</a></h3>
+                        </div>
                         <div class="exp-progression">
                             <span>Senior Platforms Engineer <em>Jul 2022 &mdash; Mar 2025</em></span>
                             <span>Platform Engineer III <em>Jan 2020 &mdash; Jul 2022</em></span>
@@ -131,87 +133,63 @@
                             <li>Optimized the end-to-end logging pipeline, reducing infrastructure costs and operational overhead, resulting in annual savings of over $2.3M</li>
                         </ul>
                         <div class="tags">
-                            <span>Kafka</span>
-                            <span>Elasticsearch</span>
-                            <span>Graylog</span>
-                            <span>Druid</span>
-                            <span>Kubernetes</span>
-                            <span>Prometheus</span>
-                            <span>Grafana</span>
-                            <span>Zookeeper</span>
-                            <span>Vector</span>
-                            <span>Redpanda Connect</span>
-                            <span>AWS</span>
-                            <span>Terraform</span>
+                            <span>Kafka</span><span>Elasticsearch</span><span>Graylog</span><span>Druid</span><span>Kubernetes</span><span>Prometheus</span><span>Grafana</span><span>Zookeeper</span><span>Vector</span><span>Redpanda Connect</span><span>AWS</span><span>Terraform</span>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-date">2017 &mdash; 2018</div>
-                    <div class="exp-body">
-                        <h3>Research &amp; Teaching Assistant &middot; <a href="https://www.binghamton.edu/watson/" target="_blank" rel="noopener">Binghamton University</a></h3>
-                        <p class="exp-sub">Binghamton, NY</p>
+                    <article class="exp-item">
+                        <div class="exp-head">
+                            <p class="exp-date">2017 &mdash; 2018 &middot; Binghamton, NY</p>
+                            <h3>Research &amp; Teaching Assistant &middot; <a href="https://www.binghamton.edu/watson/" target="_blank" rel="noopener">Binghamton University</a></h3>
+                        </div>
                         <ul>
                             <li>Researched OS virtualization under Prof. <a href="https://cs.binghamton.edu/~kartik" target="_blank" rel="noopener">Kartik Gopalan</a>: vCPU scheduling, process pinning, and live hypervisor replacement</li>
                             <li>Improved virtual machine performance by 7&ndash;10% through process pinning and paravirtualized TLB flush</li>
                             <li>TA for <a href="https://oscourse.github.io/" target="_blank" rel="noopener">CS550 &mdash; Operating Systems</a> and CS451/551 &mdash; Systems Programming</li>
                         </ul>
-                        <div class="tags">
-                            <span>Linux Kernel</span>
-                            <span>KVM</span>
-                            <span>C</span>
-                            <span>Virtualization</span>
-                        </div>
-                    </div>
-                </div>
+                        <div class="tags"><span>Linux Kernel</span><span>KVM</span><span>C</span><span>Virtualization</span></div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-date">2015 &mdash; 2016</div>
-                    <div class="exp-body">
-                        <h3>Software Engineer &middot; <a href="https://www.evry.com/in/" target="_blank" rel="noopener">EVRY India Pvt Ltd</a></h3>
-                        <p class="exp-sub">Bengaluru, India</p>
+                    <article class="exp-item">
+                        <div class="exp-head">
+                            <p class="exp-date">2015 &mdash; 2016 &middot; Bengaluru, India</p>
+                            <h3>Software Engineer &middot; <a href="https://www.evry.com/in/" target="_blank" rel="noopener">EVRY India Pvt Ltd</a></h3>
+                        </div>
                         <ul>
                             <li>Built backend services in C# ASP.NET MVC with ADO.NET, designing REST APIs and business logic for a US-based mortgage company</li>
                             <li>Developed frontend interfaces with JavaScript and HTML in MVC pattern</li>
                         </ul>
-                        <div class="tags">
-                            <span>C#</span>
-                            <span>ASP.NET MVC</span>
-                            <span>JavaScript</span>
-                            <span>REST APIs</span>
-                        </div>
-                    </div>
+                        <div class="tags"><span>C#</span><span>ASP.NET MVC</span><span>JavaScript</span><span>REST APIs</span></div>
+                    </article>
+
                 </div>
 
-                <a href="assets/resume/resume9.pdf" target="_blank" rel="noopener" class="inline-link">
-                    View Full Resume <i class="fas fa-arrow-right"></i>
-                </a>
+                <a href="assets/resume/resume9.pdf" target="_blank" rel="noopener" class="inline-link">View Full Resume <i class="fas fa-arrow-right"></i></a>
             </section>
 
             <!-- ==================== SKILLS ==================== -->
-            <!-- To update: add/remove <span> tags inside .tags divs -->
             <section id="skills" aria-label="Technical skills">
-                <div class="section-label">Skills</div>
+                <h2 class="section-title"><span class="tick" aria-hidden="true"></span>Technical Skills</h2>
+
                 <div class="skill-groups">
                     <div class="skill-group">
-                        <h3>Languages</h3>
+                        <h3><i class="fas fa-code"></i> Languages</h3>
                         <div class="tags"><span>Python</span><span>Go</span><span>Java</span><span>C</span><span>C#</span><span>Shell</span></div>
                     </div>
                     <div class="skill-group">
-                        <h3>DevOps &amp; Infrastructure</h3>
+                        <h3><i class="fas fa-server"></i> DevOps &amp; Infrastructure</h3>
                         <div class="tags"><span>Kubernetes</span><span>Helm</span><span>Docker</span><span>Nomad</span><span>AWS</span><span>Terraform</span><span>Git</span><span>Linux</span></div>
                     </div>
                     <div class="skill-group">
-                        <h3>Data Streaming &amp; Messaging</h3>
+                        <h3><i class="fas fa-diagram-project"></i> Data Streaming &amp; Messaging</h3>
                         <div class="tags"><span>Kafka</span><span>Kafka Streams</span><span>Zookeeper</span><span>Vector</span><span>FluentBit</span><span>Redpanda Connect</span><span>Logstash</span></div>
                     </div>
                     <div class="skill-group">
-                        <h3>Monitoring &amp; Observability</h3>
+                        <h3><i class="fas fa-chart-line"></i> Monitoring &amp; Observability</h3>
                         <div class="tags"><span>Elasticsearch</span><span>Kibana</span><span>Graylog</span><span>Prometheus</span><span>Grafana</span><span>Druid</span><span>Sentry</span></div>
                     </div>
                     <div class="skill-group">
-                        <h3>AI Tools</h3>
+                        <h3><i class="fas fa-robot"></i> AI Tools</h3>
                         <div class="tags"><span>Cursor</span><span>Claude Code</span><span>Codex</span><span>OpenCode</span></div>
                     </div>
                 </div>
@@ -219,85 +197,72 @@
 
             <!-- ==================== PROJECTS ==================== -->
             <section id="projects" aria-label="Research and projects">
-                <div class="section-label">Research &amp; Projects</div>
+                <h2 class="section-title"><span class="tick" aria-hidden="true"></span>Research &amp; Projects</h2>
 
-                <div class="exp-item">
-                    <div class="exp-date">2018</div>
-                    <div class="exp-body">
+                <div class="project-grid">
+                    <article class="project-card">
+                        <p class="exp-date">2018</p>
                         <h3>Hypervisor Optimization</h3>
-                        <p class="exp-sub">Research with Prof. <a href="https://cs.binghamton.edu/~kartik" target="_blank" rel="noopener">Kartik Gopalan</a> &amp; ITRI, Taiwan</p>
+                        <p class="project-sub">Research with Prof. <a href="https://cs.binghamton.edu/~kartik" target="_blank" rel="noopener">Kartik Gopalan</a> &amp; ITRI, Taiwan</p>
                         <p>Optimized the Linux kernel to reduce hypervisor involvement in VM operations by cutting VM exits. Reduced hypervisor overhead in network transactions through VFIO and PCI-passthrough.</p>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-date">2017 &mdash; 2018</div>
-                    <div class="exp-body">
+                    <article class="project-card">
+                        <p class="exp-date">2017 &mdash; 2018</p>
                         <h3>Live Replacement of Hypervisor</h3>
-                        <p class="exp-sub">Funded by National Science Foundation</p>
+                        <p class="project-sub">Funded by National Science Foundation</p>
                         <p>Designed a system to replace a running hypervisor with a new version without stopping virtual machines, eliminating downtime during hypervisor updates.</p>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-date">2017 &mdash; 2018</div>
-                    <div class="exp-body">
+                    <article class="project-card">
+                        <p class="exp-date">2017 &mdash; 2018</p>
                         <h3>vCPU Performance in Virtual Machines</h3>
-                        <p class="exp-sub">Research with Prof. Kartik Gopalan</p>
+                        <p class="project-sub">Research with Prof. Kartik Gopalan</p>
                         <p>Maintained VM performance constant as virtual CPU count increased. Achieved 7&ndash;10% improvement through process pinning and TLB flush paravirtualization.</p>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-date">2014 &mdash; 2015</div>
-                    <div class="exp-body">
+                    <article class="project-card">
+                        <p class="exp-date">2014 &mdash; 2015</p>
                         <h3>Data Embedding in Medical Images</h3>
-                        <p class="exp-sub">Balmatta Diagnostic &amp; Research Centre, Mangalore</p>
+                        <p class="project-sub">Balmatta Diagnostic &amp; Research Centre, Mangalore</p>
                         <p>Designed data hiding in MRI DICOM images based on region of interest using discrete cosine transformation.</p>
-                    </div>
+                    </article>
                 </div>
 
-                <div class="publication-block">
-                    <h4>Publication</h4>
-                    <a href="https://ieeexplore.ieee.org/document/8526900" target="_blank" rel="noopener" class="publication-link">
-                        <span class="pub-title">Overcoming Virtualization Overheads for Large-vCPU Virtual Machines <i class="fas fa-arrow-up-right-from-square"></i></span>
-                        <span class="pub-authors">Ozgur Kilic, Spoorti Doddamani, <strong>Aprameya Bhat</strong>, Hardik Bagdi, Kartik Gopalan</span>
-                        <span class="pub-venue">IEEE MASCOTS, 2018</span>
-                    </a>
-                </div>
-
-                <a href="https://github.com/bhataprameya?tab=repositories" target="_blank" rel="noopener" class="inline-link">
-                    More on GitHub <i class="fas fa-arrow-right"></i>
+                <a href="https://ieeexplore.ieee.org/document/8526900" target="_blank" rel="noopener" class="publication-link">
+                    <span class="pub-badge">IEEE MASCOTS &middot; 2018</span>
+                    <span class="pub-title">Overcoming Virtualization Overheads for Large-vCPU Virtual Machines <i class="fas fa-arrow-up-right-from-square"></i></span>
+                    <span class="pub-authors">Ozgur Kilic, Spoorti Doddamani, <strong>Aprameya Bhat</strong>, Hardik Bagdi, Kartik Gopalan</span>
                 </a>
+
+                <a href="https://github.com/bhataprameya?tab=repositories" target="_blank" rel="noopener" class="inline-link">More on GitHub <i class="fas fa-arrow-right"></i></a>
             </section>
 
             <!-- ==================== EDUCATION ==================== -->
             <section id="education" aria-label="Education">
-                <div class="section-label">Education</div>
+                <h2 class="section-title"><span class="tick" aria-hidden="true"></span>Education</h2>
 
-                <div class="exp-item">
-                    <div class="exp-date">2016 &mdash; 2018</div>
-                    <div class="exp-body">
-                        <h3>Master of Science in Computer Science</h3>
-                        <p class="exp-sub"><a href="https://www.binghamton.edu/watson/" target="_blank" rel="noopener">Binghamton University (SUNY)</a> &middot; GPA: 3.7 / 4.0</p>
+                <div class="edu-grid">
+                    <article class="edu-card">
+                        <p class="exp-date">2016 &mdash; 2018</p>
+                        <h3>Master of Science, Computer Science</h3>
+                        <p class="project-sub"><a href="https://www.binghamton.edu/watson/" target="_blank" rel="noopener">Binghamton University (SUNY)</a> &middot; GPA 3.7 / 4.0</p>
                         <p class="edu-courses">Cloud Computing, Computer Networks, Operating Systems, Systems Programming, Computer Architecture, Algorithms, Programming Languages</p>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="exp-item">
-                    <div class="exp-date">2011 &mdash; 2015</div>
-                    <div class="exp-body">
-                        <h3>Bachelor of Engineering in Computer Science</h3>
-                        <p class="exp-sub"><a href="http://vtu.ac.in/" target="_blank" rel="noopener">Visvesvaraya Technological University</a> &middot; First Class</p>
-                    </div>
+                    <article class="edu-card">
+                        <p class="exp-date">2011 &mdash; 2015</p>
+                        <h3>Bachelor of Engineering, Computer Science</h3>
+                        <p class="project-sub"><a href="http://vtu.ac.in/" target="_blank" rel="noopener">Visvesvaraya Technological University</a> &middot; First Class</p>
+                    </article>
                 </div>
             </section>
 
             <!-- ==================== LANGUAGES ==================== -->
             <section id="languages" aria-label="Languages spoken">
-                <div class="section-label">Languages</div>
+                <h2 class="section-title"><span class="tick" aria-hidden="true"></span>Languages</h2>
                 <div class="language-list">
-                    <span>Kannada <em>(Native)</em></span>
+                    <span>Kannada <em>native</em></span>
                     <span>English</span>
                     <span>Hindi</span>
                     <span>Tulu</span>
@@ -306,12 +271,28 @@
                 </div>
             </section>
 
-            <footer>
-                <p>&copy; 2026 Aprameya Bhat</p>
-            </footer>
+        </div>
 
-        </main>
-    </div>
+        <!-- ==================== FOOTER CTA ==================== -->
+        <footer>
+            <div class="container footer-inner">
+                <p class="footer-eyebrow">What's next</p>
+                <h2 class="footer-title">Let's build something <em>reliable</em>.</h2>
+                <p class="footer-sub">Infra that holds up under real traffic is my happy place. Say hello.</p>
+                <a href="mailto:abhat3@binghamton.edu" class="btn btn-primary">Get in touch <i class="fas fa-arrow-right"></i></a>
+
+                <ul class="social-links footer-socials" aria-label="Social links">
+                    <li><a href="https://github.com/bhataprameya" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/aprameya-bhat/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="mailto:abhat3@binghamton.edu" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="assets/resume/resume9.pdf" target="_blank" rel="noopener" aria-label="Resume"><i class="fas fa-file-lines"></i></a></li>
+                </ul>
+
+                <p class="fine">&copy; 2026 Aprameya Bhat</p>
+            </div>
+        </footer>
+
+    </main>
 
     <script src="assets/js/main.js"></script>
 </body>
